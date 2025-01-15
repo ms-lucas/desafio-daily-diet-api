@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:16.3-alpine3.20
+    container_name: pg-daily-diet
+    volumes:
+      - pg-data-daily-diet:/var/lib/postgresql/data
+    networks:
+      - daily-diet
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+  
+volumes:
+  pg-data-daily-diet:
+
+networks:
+  daily-diet:
+    name: daily-diet
+    driver: bridge

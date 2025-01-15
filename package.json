@@ -1,0 +1,38 @@
+{
+  "name": "desafio-daily-diet-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx ./src/server.ts",
+    "start:dev": "tsx watch ./src/server.ts",
+    "start:prod": "node ./dist/server.js",
+    "test": "vitest run --no-file-parallelism",
+    "test:watch": "vitest --no-file-parallelism",
+    "build": "tsup src",
+    "knex": "node --import tsx ./node_modules/knex/bin/cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fastify/cookie": "^10.0.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^5.0.0",
+    "knex": "^3.1.0",
+    "pg": "^8.13.0",
+    "supertest": "^7.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^22.7.3",
+    "@types/supertest": "^6.0.2",
+    "sqlite3": "^5.1.7",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  }
+}

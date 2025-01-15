@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+
+# environment
+.env
+.env.test
+
+# database
+src/lib/knex/db/*.db
+
+# tests
+coverage
+
+
